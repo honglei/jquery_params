@@ -73,7 +73,7 @@ def jquery_unparam_unquoted(jquery_params):
     return merge_structs(key_pairs)
 
 def jquery_unparam(jquery_params):   
-    key_value_pairs= urlparse.parse_qsl(test_str)
+    key_value_pairs= urlparse.parse_qsl(jquery_params)
     struct_list = [parse_key_pair(key, val) for key,val in key_value_pairs]
     result  = merge_structs(struct_list)    
     return result
